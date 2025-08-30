@@ -1,0 +1,28 @@
+# /etc/systemd/system/VirtunoRunner.service / Francisco Gonçalves (c)
+[Unit]
+Description=Executor Virtuno Runner v.2.1
+After=network.target
+
+[Service]
+User=username
+Group=usernameGroup
+
+# Diretório de trabalho onde está o teu script
+WorkingDirectory=/home/username/Binaries
+Environment=EXECUTOR_TOKEN=yourtokenid
+Environment=EXECUTOR_PASS=yourpass
+Environment=EXECUTOR_USER=username
+Environment=REQUIRE_LOGIN=1
+Environment=EXECUTOR_OUTPUT_DIR=/home/username/Binaries/chatgpt_outputs
+Environment=GM_SF2="/caminho/para/FluidR3_GM.sf2"
+Environment=EXECUTOR_ROOT=/home/username/Binaries/chatgpt_outputs
+
+Environment=XDG_RUNTIME_DIR=/run/user/%U
+
+ExecStart=/home/username/Binaries/venv/bin/python3 /home/username/Binaries/VirtunoRunner.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
+

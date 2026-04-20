@@ -1,3 +1,6 @@
+More info and imagem here:
+ https://www.fragmentoscaos.eu/2025/08/29/%f0%9f%8c%8c-virtunorunner-da-ideia-ao-som-um-executor-aberto-para-o-futuro/
+
 
 # 🚀 VirtunoRunner — Run Scripts from Your Browser (Python • Shell • Audio)
 
